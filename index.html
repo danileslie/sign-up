@@ -5,9 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script> 
     <title>Sign-up!</title>
 </head>
 <body>
-    
+    <div class="container">
+    <section class="sidebar">
+        <img class="image" src="images/ali-zahdhan-WpU9j-_FeYk-unsplash.jpg" alt="the sky at dusk with a layer of clouds at the bottom"> 
+        <div class="company">
+            <h1 class="companyName">Orbital</h1></div>
+    </section>
+    <section class="textSection">
+        <div class="callText">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi bibendum neque 
+            egestas congue quisque egestas diam in arcu. </p>
+            <p>Sign up <em>now</em> to get started!</p>
+            <p>You <em>know</em> you want to.</p>
+        </div>
+        <section class="form">
+            <p class="lets">Let's do this!</p>
+    <form class="signUp" id="signUpForm" action="#">
+        <div class="inputs">
+            <label for="firstName">First Name <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="inputs">
+        <label for="lastName">Last Name <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+        <input type="text" id="lastName" name="lastName" required>
+    </div>
+        <div class="inputs">
+        <label for="email">Email <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+        <input type="email" id="email" name="email" required>
+    </div>
+        <div class="inputs">
+        <label for="phoneNumber">Phone Number </label>
+        <input type="tel" id="phoneNumber" name="phoneNumber">
+    </div>
+        <div class="inputs input-pwd">
+        <label for="pwd">Password <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+        <input type="password" id="pwd" name="password" minlength="8" pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[!?_\-\/\\])[a-zA-Z0-9$@&+\-\/#_?!]{8,}" required>
+        <div id="message">
+            <h4>Password must contain the following: </h4>
+            <p id="l-letter" class="invalid">A lowercase letter</p>
+            <p id="u-letter" class="invalid">An uppercase Letter</p>
+            <p id="number" class="invalid">A number</p>
+            <p id="character" class="invalid">A special character ($@&+-/#_?!)</p>
+            <p id="length" class="invalid">A minimum of 8 characters</p>
+        </div>
+    </div>
+   
+        <div class="inputs">
+        <label for="pwd-repeat">Confirm Password <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+        <input type="password" id="pwd-repeat" name="pwd-repeat" required>
+    </div>
+    </form>
+    <button type="submit" id="button" form="signUpForm">Create Account</button>
+</section>
+<p>Already have an account? <a href="#">Log in</a></p>
+</section>
+</div>
+
 </body>
 </html>

@@ -8,26 +8,27 @@ let number = document.getElementById('number');
 let character = document.getElementById('character');
 let length = document.getElementById('length');
 
-function passwordValidate(){
-    if (password.value != confirmPassword.value){
-        confirmPassword.setCustomValidity('Passwords do not match!');
-    } else{
-        confirmPassword.setCustomValidity('');
-    }
-}
+button.addEventListener('mouseup', passwordValidate);
 
-button.addEventListener('click', passwordValidate);
+password.addEventListener('blur', function(){
+  message.style.display = 'none';
+});
 
 password.addEventListener('focus', function(){
     message.style.display = 'block';
 });
 
-password.addEventListener('blur', function(){
-    message.style.display = 'none';
-});
+
 
 password.addEventListener('keyup', validationPopup);
 
+function passwordValidate(){
+    if (password.value != confirmPassword.value){
+      confirmPassword.setCustomValidity('Passwords do not match!');
+    } else{
+      return   
+    }
+}
 
 // password validation
 

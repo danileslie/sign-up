@@ -1,7 +1,9 @@
 body{
-    background: rgba(0, 0, 0, 0.4);
+    background: #c8d7e0;
+    color: #253741;
     margin: 0;
     padding: 0;
+    font-family: 'Hind Madurai', sans-serif;
 }
 .container{
     display: flex;
@@ -23,7 +25,6 @@ body{
     flex-direction: column;
     justify-content:center;
     width: 100%;
-    border: 2px solid goldenrod;
 }
 
 input{
@@ -32,37 +33,36 @@ input{
 
 .companyName{
 text-align: center;
-color: white;
-font-size: 2rem;
+color: #B25068;
+-webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+font-size: 4rem;
 }
 
 .company{
-    height: auto;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     position: absolute;
     z-index: 9;
-    top: 32vh;
+    top: 27vh;
     width: 100%;
   
 }
 
 form{
     display: grid;
-    justify-items: center;
+    justify-items: flex-start;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
-    border: 2px solid blue;
 }
 .form{
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: #c8d7e0;
 }
 
 .callText{
-    border: 2px solid goldenrod;
     width: 50vw;
-    align-self: center;
-    margin-bottom: 2rem;
+    padding: 2rem;
 }
 
 .inputs{
@@ -84,7 +84,13 @@ width: 400px;
 }
 
 button{
-margin-top: 2rem;
+margin: 2rem;
+width: 10rem;
+}
+
+.login{
+    margin-top: 0;
+    margin-left: 2rem;
 }
 
 #message{
@@ -104,7 +110,7 @@ input:user-invalid{
   
   .valid:before {
     position: relative;
-    left: -10px;
+    margin-right: 10px;
     content: "✓";
   }
   
@@ -115,10 +121,13 @@ input:user-invalid{
   
   .invalid:before {
     position: relative;
-    left: -10px;
+    margin-right: 10px;
     content: "×";
   }
 
+  #message{
+    display: none;
+  }
 
 
 

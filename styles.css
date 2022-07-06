@@ -3,8 +3,20 @@ body{
     color: #253741;
     margin: 0;
     padding: 0;
-    font-family: 'Hind Madurai', sans-serif;
+    font-family: 'Hind Madurai', Arial, Helvetica, sans-serif;
 }
+.company, .textSection{
+    width: 100%;
+}
+
+.callText, .form{
+    padding: 2rem;
+}
+
+.callText, .lets{
+    font-size: 2rem;
+}
+
 .container{
     display: flex;
 }
@@ -14,38 +26,55 @@ body{
     width: 35vw;
     height: 100vh;
 }
+
+/* left side of page */
+
 .image{
     width: inherit;
     height: inherit;
     vertical-align: middle;
 }
 
+.companyName{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 1.5rem;
+    color: #6e4171;
+    }
+    
+.company{
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 9;
+    top: 27vh;
+}
+
+/* right side of page */
+
 .textSection{
     display: flex;
     flex-direction: column;
     justify-content:center;
-    width: 100%;
+}
+
+.callText{
+    width: 50vw;
+}
+
+.callText p {
+    margin-bottom: 2rem;
+}
+
+.lets{
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 input{
     height: 1.5rem;
-}
-
-.companyName{
-text-align: center;
-color: #B25068;
--webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
-font-size: 4rem;
-}
-
-.company{
-    background: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    z-index: 9;
-    top: 27vh;
-    width: 100%;
-  
 }
 
 form{
@@ -54,80 +83,109 @@ form{
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
 }
-.form{
-    padding: 2rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    background-color: #c8d7e0;
-}
 
-.callText{
-    width: 50vw;
-    padding: 2rem;
+.form{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .inputs{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
 
 input{
-width: 400px;
+    width: 20rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 0.2rem;
+    font-size: 1.3rem
+}
+
+label{
+    font-size: 1.3rem;
 }
 
 .input-pwd{
     position: relative;
 }
 
-.callText, .lets{
-    font-size: 1.5rem;
+#message{
+    position: absolute;
+    top: 4.5rem;
+    background: #6e4171;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: white;   
 }
 
 button{
-margin: 2rem;
-width: 10rem;
+    margin: 2rem;
+    width: 10rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    background-color: #844e88;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .login{
     margin-top: 0;
-    margin-left: 2rem;
+    margin-left: 2rem;   
 }
 
-#message{
-    position: absolute;
-    top: 3rem;
-    z-index: 3;
+.logclick, a:visited{
+    text-decoration: none;
+    color: #6e4171;
+    font-weight: bold;
 }
 
 /* valid and invalid password styles */
+
+input:focus{
+    outline: none;
+    border: 2px solid rgb(0, 183, 255);
+}
+
 input:user-invalid{
     border: 2px solid red;
 }
 
 .valid {
-    color: green;
-  }
-  
-  .valid:before {
-    position: relative;
-    margin-right: 10px;
-    content: "✓";
-  }
-  
-  /* Add a red text color and an "x" icon when the requirements are wrong */
-  .invalid {
-    color: red;
-  }
-  
-  .invalid:before {
-    position: relative;
-    margin-right: 10px;
-    content: "×";
-  }
+    color: #b3f9bf;
+}
 
-  #message{
+.valid:before, .invalid:before{
+    position: relative;
+    margin-right: 10px;
+}
+
+.valid:before {
+    content: '✓';
+}
+/* Add a red text color and an 'x' icon when the requirements are wrong */
+.invalid {
+    color: #f5b3f9;
+}
+  
+.invalid:before {
+    content: '×';
+}
+
+#message{
     display: none;
-  }
+}
+
+.credit{
+    position: absolute;
+    top: 0;
+    color: rgba(231, 207, 207, 0.7);
+}
+
 
 
 

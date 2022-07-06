@@ -20,5 +20,5 @@ before submission
 
 # Links
 
-- [Assignment page](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form) "The Odin Project sign-up form assignment"
+- [Assignment page](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form "The Odin Project sign-up form assignment") 
 
